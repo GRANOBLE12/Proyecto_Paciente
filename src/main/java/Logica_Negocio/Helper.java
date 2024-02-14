@@ -4,6 +4,8 @@
  */
 package Logica_Negocio;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ANDRES
@@ -25,134 +27,133 @@ public class Helper {
         return numero;
     }
 
-    public static int RetornarCE(String Nombre) {
-        int ce = 0;
-        for (int j = 0; j < Nombre.length(); j++) {
-            boolean flag = Character.isLetter(Nombre.charAt(j));
-            if (!flag) {
-                //System.out.println("'"+ nombre.charAt(j)+"' is a number");
-                if (Nombre.charAt(j) == '@') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '~') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '/') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == ';') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == ':') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '"') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '!') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == ' ') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == 'º') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '-') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '¬') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '|') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '?') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '¿') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '&') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '%') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '$') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '.') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '#') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '_') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '*') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '<') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '>') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '€') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == 'Ç') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '+') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '(') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == ')') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '»') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '¥') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '«') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '¶') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '[') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == ']') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '{') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '}') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '÷') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == '=') {
-                    ce++;
-                }
-                if (Nombre.charAt(j) == ',') {
-                    ce++;
-                }
-            }
-        }
-        return ce;
-    }
-
+//    public static int RetornarCE(String Nombre) {
+//        int ce = 0;
+//        for (int j = 0; j < Nombre.length(); j++) {
+//            boolean flag = Character.isLetter(Nombre.charAt(j));
+//            if (!flag) {
+//                //System.out.println("'"+ nombre.charAt(j)+"' is a number");
+//                if (Nombre.charAt(j) == '@') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '~') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '/') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == ';') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == ':') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '"') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '!') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == ' ') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == 'º') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '-') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '¬') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '|') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '?') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '¿') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '&') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '%') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '$') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '.') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '#') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '_') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '*') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '<') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '>') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '€') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == 'Ç') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '+') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '(') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == ')') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '»') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '¥') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '«') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '¶') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '[') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == ']') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '{') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '}') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '÷') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == '=') {
+//                    ce++;
+//                }
+//                if (Nombre.charAt(j) == ',') {
+//                    ce++;
+//                }
+//            }
+//        }
+//        return ce;
+//    }
     public static int RetornarCEPD(String Direccion) {
         int ce = 0;
         for (int j = 0; j < Direccion.length(); j++) {
@@ -266,6 +267,32 @@ public class Helper {
                 }
                 if (Direccion.charAt(j) == ',') {
                     ce++;
+                }
+            }
+        }
+        return ce;
+    }
+
+    public static int RetornarCEv2(String Nombre) {
+        int ce = 0;
+        ArrayList<Character> iscaracter = new ArrayList<>();
+        iscaracter.add('@');
+        iscaracter.add('[');
+        iscaracter.add('}');
+        iscaracter.add('{');
+        iscaracter.add(';');
+        iscaracter.add('*');
+        iscaracter.add('?');
+        iscaracter.add('¡');
+        iscaracter.add('¿');
+        iscaracter.add('/');
+        for (int j = 0; j < Nombre.length(); j++) {
+            boolean flag = Character.isLetter(Nombre.charAt(j));
+            if (!flag) {
+                for (int i = 0; i < iscaracter.size(); i++) {
+                    if (iscaracter.get(i).compareTo(Nombre.charAt(j)) == 0) {
+                        ce++;
+                    }
                 }
             }
         }

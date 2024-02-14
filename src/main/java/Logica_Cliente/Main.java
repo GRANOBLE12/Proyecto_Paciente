@@ -7,7 +7,7 @@ package Logica_Cliente;
 import Logica_Negocio.Paciente;
 import java.util.ArrayList;
 import java.util.Scanner;
-import static Logica_Negocio.Helper.RetornarCE;
+import static Logica_Negocio.Helper.RetornarCEv2;
 import static Logica_Negocio.Helper.RetornarValor;
 import static Logica_Negocio.Helper.RetornarCEPD;
 import static Logica_Negocio.Paciente.validarCedula;
@@ -50,12 +50,12 @@ public class Main {
         scan.nextLine(); 
         for (int i = 0; i < cantidad; i++) {
             retorno = RetornarValor(Nombre);
-            retornoce=RetornarCE(Nombre);
+            retornoce=RetornarCEv2(Nombre);
             while(retorno!=0||retornoce!=0||Nombre.equals("")) {
                 System.out.println("Digite el nombre del paciente");
                 Nombre=scan.nextLine().trim();
                 retorno = RetornarValor(Nombre);
-                retornoce=RetornarCE(Nombre);
+                retornoce=RetornarCEv2(Nombre);
             }
             
             while(Cedula.equals("")||!validarCedula(Cedula)){   
