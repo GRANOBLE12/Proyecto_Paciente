@@ -49,12 +49,12 @@ public class Main {
 } while (cantidad <= 0);
         scan.nextLine(); 
         for (int i = 0; i < cantidad; i++) {
-            retorno = RetornarValor(Nombre);
+//            retorno = RetornarValor(Nombre);
             retornoce=RetornarCEv2(Nombre);
-            while(retorno!=0||retornoce!=0||Nombre.equals("")) {
+            while(retornoce!=0||Nombre.equals("")) {
                 System.out.println("Digite el nombre del paciente");
                 Nombre=scan.nextLine().trim();
-                retorno = RetornarValor(Nombre);
+//                retorno = RetornarValor(Nombre);
                 retornoce=RetornarCEv2(Nombre);
             }
             
