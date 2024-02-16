@@ -4,6 +4,8 @@
  */
 package Logica_Negocio;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ANDRES
@@ -12,15 +14,17 @@ public class Paciente {
     String Nombre;
     String Cedula;
     String Direccion;
+    float Peso;
     
     public Paciente(){
         
     }
 
-    public Paciente(String Nombre, String Cedula, String Direccion) {
+    public Paciente(String Nombre, String Cedula, String Direccion, float Peso) {
         this.Nombre = Nombre;
         this.Cedula = Cedula;
         this.Direccion = Direccion;
+        this.Peso = Peso;
     }
 
     public void setNombre(String Nombre) {
@@ -35,6 +39,10 @@ public class Paciente {
         this.Direccion = Direccion;
     }
 
+    public void setPeso(float Peso) {
+        this.Peso = Peso;
+    }
+
     public String getNombre() {
         return Nombre;
     }
@@ -46,7 +54,19 @@ public class Paciente {
     public String getDireccion() {
         return Direccion;
     }
-  public static boolean validarCedula(String cedula) {
-        return cedula.matches("[0-9]+");
+
+    public float getPeso() {
+        return Peso;
     }
+    public static float CalcularPromedio(ArrayList<Paciente>listapacientes){
+    float acomulador=0;
+    float promedio=0;
+
+    for (int i = 0; i < listapacientes.size(); i++) {
+        acomulador+=listapacientes.get(i).getPeso();
+    }
+    promedio=acomulador/listapacientes.size();
+    return promedio;
 }
+
+}  

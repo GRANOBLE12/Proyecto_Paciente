@@ -26,134 +26,6 @@ public class Helper {
         }
         return numero;
     }
-
-//    public static int RetornarCE(String Nombre) {
-//        int ce = 0;
-//        for (int j = 0; j < Nombre.length(); j++) {
-//            boolean flag = Character.isLetter(Nombre.charAt(j));
-//            if (!flag) {
-//                //System.out.println("'"+ nombre.charAt(j)+"' is a number");
-//                if (Nombre.charAt(j) == '@') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '~') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '/') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == ';') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == ':') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '"') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '!') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == ' ') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == 'º') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '-') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '¬') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '|') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '?') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '¿') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '&') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '%') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '$') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '.') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '#') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '_') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '*') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '<') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '>') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '€') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == 'Ç') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '+') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '(') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == ')') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '»') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '¥') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '«') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '¶') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '[') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == ']') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '{') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '}') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '÷') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == '=') {
-//                    ce++;
-//                }
-//                if (Nombre.charAt(j) == ',') {
-//                    ce++;
-//                }
-//            }
-//        }
-//        return ce;
-//    }
     public static int RetornarCEPD(String Direccion) {
         int ce = 0;
         for (int j = 0; j < Direccion.length(); j++) {
@@ -298,4 +170,8 @@ public class Helper {
         }
         return ce;
     }
-}
+public static boolean validarCedula(String cedula) {
+        return cedula.matches("[0-9]+");
+    }
+
+}     
